@@ -7,16 +7,15 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 /**
- * Very Simple Document Type model
+ * Model for property definitions
  */
-class DocType extends Model
+class PropertyType extends Model
 {
     use HasFactory, SoftDeletes;
-
-    protected $table = 'doc_types';
-    protected $primary_key = 'id';
     protected $fillable = [
-        'doc_type_name',
-        'doc_type_description',
+        'property_name',
+        'property_description',
+        'data_type',
     ];
+    protected $table = 'property_types';
 }
