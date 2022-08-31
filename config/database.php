@@ -48,7 +48,7 @@ return [
             'url' => env('DATABASE_URL'),
             'host' => env('DB_HOST', '127.0.0.1'),
             'port' => env('DB_PORT', '3306'),
-            'database' => env('DB_DATABASE', 'headlesscms'),
+            'database' => env('DB_DATABASE', 'yamplecms'),
             'username' => env('DB_USERNAME', 'root'),
             'password' => env('DB_PASSWORD', 'passw0rd'),
             'unix_socket' => env('DB_SOCKET', ''),
