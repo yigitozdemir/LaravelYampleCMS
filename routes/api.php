@@ -37,6 +37,10 @@ Route::controller(UserController::class)->group(function () {
  */
 Route::controller(DocumentTypeController::class)->group(function(){
     Route::get('doctype/getAll', 'getDocTypeDefinitions');
+    Route::get('doctype/get/{id}', 'getDocTypeDefinition');
+    Route::post('doctype/create', 'createDocTypeDefinition');
+    Route::post('doctype/update/name/{id}', 'updateName');
+    Route::post('doctype/update/description/{id}', 'updateDescription');
 });
 
 /**
