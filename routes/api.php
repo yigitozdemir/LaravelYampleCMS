@@ -41,6 +41,7 @@ Route::controller(DocumentTypeController::class)->group(function(){
     Route::post('doctype/create', 'createDocTypeDefinition');
     Route::post('doctype/update/name/{id}', 'updateName');
     Route::post('doctype/update/description/{id}', 'updateDescription');
+    Route::post('doctype/delete/{id}', 'deleteDocType');
 });
 
 /**

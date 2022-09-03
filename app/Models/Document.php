@@ -16,6 +16,7 @@ class Document extends Model
     protected $fillable = 
     [
         'doc_name',
+        'document_type',
         'doc_description',
         'physical_document'
     ];
