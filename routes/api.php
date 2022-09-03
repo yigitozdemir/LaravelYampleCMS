@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\DocumentTypeController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
 use Illuminate\Http\Request;
@@ -30,6 +31,13 @@ Route::controller(UserController::class)->group(function () {
 });
 
 
+/**
+ * Routes
+ * Document Type Api
+ */
+Route::controller(DocumentTypeController::class)->group(function(){
+    Route::get('doctype/getAll', 'getDocTypeDefinitions');
+});
 
 /**
  * Routes
@@ -43,3 +51,4 @@ Route::controller(PropertyController::class)->group(function () {
     Route::post('property/update/name/{id}', 'updatePropertyName');
     Route::post('property/update/description/{id}', 'updatePropertyDescription');
 });
+
