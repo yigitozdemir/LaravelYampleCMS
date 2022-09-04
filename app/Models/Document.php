@@ -25,4 +25,15 @@ class Document extends Model
     {
         return $this->hasMany(DocValues::class);
     }
+
+    /**
+     * returns true if any document has been created in given $documentTypeId
+     * @param mixed $documentTypeId
+     * 
+     * @return bool documentType is in use
+     */
+    public static function usingDocumentType($documentTypeId)
+    {
+        return (Document::where('document_type', '=', $documentTypeId)->count() > 0);
+    }
 }

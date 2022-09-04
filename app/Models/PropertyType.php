@@ -18,4 +18,9 @@ class PropertyType extends Model
         'data_type',
     ];
     protected $table = 'property_types';
+
+    public static function exists($propId)
+    {
+        return (PropertyType::find($propId) != null);
+    }
 }

@@ -19,4 +19,9 @@ class DocType extends Model
         'doc_type_name',
         'doc_type_description',
     ];
+
+    public static function exists($docTypeId)
+    {
+        return (DocType::find($docTypeId) != null);
+    }
 }
