@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DocPropertyMapController;
+use App\Http\Controllers\DocumentController;
 use App\Http\Controllers\DocumentTypeController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\UserController;
@@ -29,6 +30,10 @@ Route::controller(UserController::class)->group(function () {
     Route::post('refresh', 'refresh');
     Route::post('logout', 'logout');
     Route::post('profile', 'profile');
+});
+
+Route::controller(DocumentController::class)->group(function(){
+    Route::post('document/create', 'createDocumentWithoutFile');
 });
 
 Route::controller(DocPropertyMapController::class)->group(function()

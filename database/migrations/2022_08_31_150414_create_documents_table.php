@@ -16,9 +16,9 @@ return new class extends Migration
         Schema::create('documents', function (Blueprint $table) {
             $table->id();
             $table->string('doc_name');
-            $table->string('doc_description');
+            $table->string('doc_description')->nullable();
             $table->unsignedBigInteger('document_type')->reference('id')->on('doc_types');
-            $table->string('physical_document');
+            $table->string('physical_document')->nullable();
             $table->timestamps();
             $table->softDeletes();
             $table->comment('core table to list documents');
